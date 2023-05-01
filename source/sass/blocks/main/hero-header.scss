@@ -1,0 +1,20 @@
+.hero-header {
+  min-height: 389px;
+  padding-top: 90px;
+  background-color: #b3d5ea;
+  color: #333333;
+  background-image: url("../img/welcome-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.hero-header--inner {
+  min-height: 158px;
+  padding-top: 52px;
+}
+
+.hero-header__image {
+  display: block;
+  margin: 0 auto;
+}

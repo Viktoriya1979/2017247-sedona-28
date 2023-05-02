@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Оставьте свой отзыв</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -47,8 +47,9 @@
     <main class="main-container-inner">
 
       <!-- ШАПКА ОСНОВНОГО СОДЕРЖИМОГО СТРАНИЦЫ ФОРМЫ -->
-      <header class="main-container-inner__header hero-header">
-        <img class="hero-header__image" src="img/sedona.svg" width="229" height="39" alt="Текст 'Sedona'.">
+      <header class="main-container-inner__header hero-header hero-header--inner">
+        <img class="hero-header__image hero-header__image--sedona" src="img/sedona.svg" width="229" height="39"
+          alt="Текст 'Sedona'.">
       </header>
 
       <h1 class="main-container-inner__title title">Оставьте свой отзыв</h1>
@@ -65,23 +66,26 @@
 
           <div class="form__groups-wrapper">
             <!-- Личные данные -->
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--name">
               <legend class="form__group-title title">Представьтесь:</legend>
               <ul class="form__field-list">
-                <li class="form__field-item form-field">
-                  <label class="form-field__label">Имя*:
+                <li class="form__field-item">
+                  <label class="form__field-label form-field">
+                    <span class="form-field__text">Имя*:</span>
                     <input class="form-field__input input" type="text" name="name" placeholder="Ваше имя" value="Пётр"
                       required>
                   </label>
                 </li>
-                <li class="form__field-item form-field">
-                  <label class="form-field__label">Фамилия*:
+                <li class="form__field-item">
+                  <label class="form__field-label form-field">
+                    <span class="form-field__text">Фамилия*:</span>
                     <input class="form-field__input input" type="text" name="surname" placeholder="Ваша фамилия"
                       value="Пустота" required>
                   </label>
                 </li>
-                <li class="form__field-item form-field">
-                  <label class="form-field__label">Отчество:
+                <li class="form__field-item">
+                  <label class="form__field-label form-field">
+                    <span class="form-field__text">Отчество:</span>
                     <input class="form-field__input input" type="text" name="patronymic" placeholder="Ваше отчество"
                       value="Викторович">
                   </label>
@@ -90,18 +94,20 @@
             </fieldset>
 
             <!-- Контактные данные -->
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--contacts">
               <legend class="form__group-title title">Контактная информация:</legend>
               <ul class="form__field-list">
-                <li class="form__field-item form-field">
-                  <label class="form-field__label">Контактный телефон*:
+                <li class="form__field-item">
+                  <label class="form__field-label form-field">
+                    <span class="form-field__text">Контактный телефон*:</span>
                     <input class="form-field__input input input--phone" type="tel" name="phone"
                       placeholder="Введите телефон" title="введите 11 цифр без пробелов. Например: 88005558628"
                       required>
                   </label>
                 </li>
-                <li class="form__field-item form-field">
-                  <label class="form-field__label">Электронная почта*:
+                <li class="form__field-item">
+                  <label class="form__field-label form-field">
+                    <span class="form-field__text">Электронная почта*:</span>
                     <!-- Если не указаны данные в поле ввода, добавить класс input--error -->
                     <input class="form-field__input input input--mail" type="email" name="email"
                       placeholder="Введите e-mail" title="email@example.com" required>
@@ -115,25 +121,25 @@
           <fieldset class="form__group">
             <legend class="form__group-title title">Ваше общее впечатление:</legend>
             <ul class="form__control-list">
-              <li class="form__control-item form-control">
-                <label class="form-control__label control">
-                  <input class="visually-hidden control__input control__input--radio" type="radio" name="impression"
-                    value="rather-positive" checked>
-                  <span class="control__text">Скорее положительное</span>
+              <li class="form__control-item">
+                <label class="form__control-label form-control">
+                  <input class="visually-hidden form-control__input form-control__input--radio" type="radio"
+                    name="impression" value="rather-positive" checked>
+                  <span class="form-control__text">Скорее положительное</span>
                 </label>
               </li>
-              <li class="form__control-item form-control">
-                <label class="form-control__label control">
-                  <input class="visually-hidden control__input control__input--radio" type="radio" name="impression"
-                    value="rather-negative">
-                  <span class="control__text">Скорее отрицательное</span>
+              <li class="form__control-item">
+                <label class="form__control-label form-control">
+                  <input class="visually-hidden form-control__input form-control__input--radio" type="radio"
+                    name="impression" value="rather-negative">
+                  <span class="form-control__text">Скорее отрицательное</span>
                 </label>
               </li>
-              <li class="form__control-item form-control">
-                <label class="form-control__label control">
-                  <input class="visually-hidden control__input control__input--radio" type="radio" name="impression"
-                    value="hard-to-answer">
-                  <span class="control__text">Затрудняюсь ответить</span>
+              <li class="form__control-item">
+                <label class="form__control-label form-control">
+                  <input class="visually-hidden form-control__input form-control__input--radio" type="radio"
+                    name="impression" value="hard-to-answer">
+                  <span class="form-control__text">Затрудняюсь ответить</span>
                 </label>
               </li>
             </ul>
@@ -141,42 +147,43 @@
 
           <!-- Посещенные достопримечательности -->
           <fieldset class="form__group">
-            <legend class="form__group-title title">Ваше общее впечатление:</legend>
+            <legend class="form__group-title title">Посещенные достопримечательности:</legend>
             <ul class="form__control-list">
-              <li class="form__control-item form-control">
-                <label class="form-control__label control">
-                  <input class="visually-hidden control__input control__input--checkbox" type="checkbox"
+              <li class="form__control-item">
+                <label class="form__control-label form-control">
+                  <input class="visually-hidden form-control__input form-control__input--checkbox" type="checkbox"
                     name="devils-bridge" checked>
-                  <span class="control__text">Мост Дьявола</span>
+                  <span class="form-control__text">Мост Дьявола</span>
                 </label>
               </li>
-              <li class="form__control-item form-control">
-                <label class="form-control__label control">
-                  <input class="visually-hidden control__input control__input--checkbox" type="checkbox"
+              <li class="form__control-item">
+                <label class="form__control-label form-control">
+                  <input class="visually-hidden form-control__input form-control__input--checkbox" type="checkbox"
                     name="mount-bell" checked>
-                  <span class="control__text">Гора-Колокол</span>
+                  <span class="form-control__text">Гора-Колокол</span>
                 </label>
               </li>
-              <li class="form__control-item form-control">
-                <label class="form-control__label control">
-                  <input class="visually-hidden control__input control__input--checkbox" type="checkbox"
+              <li class="form__control-item">
+                <label class="form__control-label form-control">
+                  <input class="visually-hidden form-control__input form-control__input--checkbox" type="checkbox"
                     name="slide-park" checked>
-                  <span class="control__text">Слайд-парк</span>
+                  <span class="form-control__text">Слайд-парк</span>
                 </label>
               </li>
-              <li class="form__control-item form-control">
-                <label class="form-control__label control">
-                  <input class="visually-hidden control__input control__input--checkbox" type="checkbox"
+              <li class="form__control-item">
+                <label class="form__control-label form-control">
+                  <input class="visually-hidden form-control__input form-control__input--checkbox" type="checkbox"
                     name="red-rocks">
-                  <span class="control__text">Красные скалы</span>
+                  <span class="form-control__text">Красные скалы</span>
                 </label>
               </li>
             </ul>
           </fieldset>
 
           <!-- Ваши эмоции -->
-          <div class="form__field-wrapper form-field">
-            <label class="form-field__label">Опишите свои эмоции:
+          <div class="form__field-wrapper">
+            <label class="form__field-label form-field form-field--textarea">
+              <span class="form-field__text title">Опишите свои эмоции:</span>
               <textarea class="form-field__input input input--textarea" name="emotions"
                 placeholder="Опишите подробно все свои восторги"></textarea>
             </label>
@@ -202,25 +209,28 @@
       <!--Ссылки на социальные сети-->
       <ul class="main-footer__socials-list socials-list">
         <li class="socials-list__item">
-          <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank">
+          <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank"
+            rel="nofollow noopener">
             <span class="visually-hidden">ВКонтакте.</span>
           </a>
         </li>
         <li class="socials-list__item">
-          <a class="socials-list__link socials-list__link--telegram" href="https://t.me/htmlacademy" target="_blank">
+          <a class="socials-list__link socials-list__link--telegram" href="https://t.me/htmlacademy" target="_blank"
+            rel="nofollow noopener">
             <span class="visually-hidden">Telegram.</span>
           </a>
         </li>
         <li class="socials-list__item">
           <a class="socials-list__link socials-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
-            target="_blank">
+            target="_blank" rel="nofollow noopener">
             <span class="visually-hidden">YouTube.</span>
           </a>
         </li>
       </ul>
 
       <!-- Разработано -->
-      <a class="main-footer__develop-link develop" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+      <a class="main-footer__develop-link develop" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+        rel="nofollow noopener">
         <span class="develop__text description">Разработано</span>
         <svg class="develop__icon-logo-htmlacademy" aria-hidden="true" focusable="false" width="29" height="35"
           viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -233,32 +243,34 @@
     </footer>
 
     <!-- Модальное окно об ошибке -->
-    <!-- Для появления модального окна, удалить класс modal-container-close -->
+    <!-- Для появления модального окна, удалить класс modal-container--close -->
     <div class="modal-container modal-container--close">
-      <div class="modal-message modal-message--error">
-        <section class="modal-content">
+      <div class="modal-container__message modal-container__message--error">
+        <section class="modal-container__content modal-content">
           <h2 class="modal-content__title title">Что-то пошло не так!</h2>
           <p class="modal-content__description description">Проверьте поля, выделенные красным, скорее всего вы забыли
             их
             заполнить</p>
         </section>
-        <!-- Кнопка закрытия модального окна -->
-        <button class="modal-message__close-button button" type="button">Oк</button>
+        <div class="modal-container__button-wrapper">
+          <!-- Кнопка закрытия модального окна -->
+          <button class="modal-container__close-button button" type="button">Oк</button>
+        </div>
       </div>
     </div>
 
     <!-- Модальное окно об успешной отправке -->
-    <!-- Для появления модального окна, удалить класс modal-container-close -->
+    <!-- Для появления модального окна, удалить класс modal-container--close -->
     <div class="modal-container modal-container--close">
-      <div class="modal-message modal-message--success">
-        <section class="modal-content">
+      <div class="modal-container__message modal-container__message--success">
+        <section class="modal-container__content modal-content">
           <h2 class="modal-content__title title">Ваш отзыв отправлен!</h2>
           <p class="modal-content__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В
             ближайшее время мы опубликуем его на сайте.</p>
         </section>
-        <div class="modal-message__button-wrapper">
+        <div class="modal-container__button-wrapper">
           <!-- Кнопка закрытия модального окна -->
-          <button class="modal-message__close-button button" type="button">Закрыть окно</button>
+          <button class="modal-container__close-button button" type="button">Закрыть окно</button>
         </div>
       </div>
     </div>

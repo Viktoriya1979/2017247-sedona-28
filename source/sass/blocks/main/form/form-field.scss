@@ -1,0 +1,18 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field__text {
+  padding-left: 16px;
+  text-transform: uppercase;
+}
+
+.form-field--textarea .form-field__text {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.form-field--textarea .form-field__input {
+  min-height: 150px;
+}

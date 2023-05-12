@@ -1,16 +1,49 @@
+@use "./variables.scss";
+
 .addition-list {
   display: grid;
   gap: 25px;
+  width: 100%;
   margin: 0;
   padding: 23px 18px 46px 18px;
   list-style-type: none;
   background-color: #ffffff;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    padding: 0;
+  }
 }
 
-.addition-list__text-wrapper {
-  max-width: 237px;
+.addition-list__item {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-height: 330px;
+    padding: 60px 33px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 69px 50px;
+  }
 }
 
 .addition-list__title {
   margin-bottom: 16px;
+  text-align: left;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.addition-list__description {
+  text-align: left;
+
+  @media (min-width: variables.$tablet-width) {
+    text-align: center;
+  }
 }

@@ -1,18 +1,35 @@
+@use "./variables.scss";
+
 .form-field {
   display: flex;
   flex-direction: column;
 }
 
 .form-field__text {
-  padding-left: 16px;
+  margin-left: 16px;
   text-transform: uppercase;
 }
 
 .form-field--textarea .form-field__text {
-  padding-left: 0;
+  margin-left: 0;
   margin-bottom: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 27px;
+  }
 }
 
 .form-field--textarea .form-field__input {
+  width: 100%;
   min-height: 150px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 154px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 768px;
+    min-height: 160px;
+    margin: 0 auto;
+  }
 }

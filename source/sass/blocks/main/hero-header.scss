@@ -1,4 +1,7 @@
+@use "./variables.scss";
+
 .hero-header {
+  width: 100%;
   min-height: 389px;
   padding-top: 90px;
   background-color: #b3d5ea;
@@ -7,11 +10,26 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 518px;
+    padding-top: 78px;
+  }
 }
 
 .hero-header--inner {
   min-height: 158px;
   padding-top: 52px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 290px;
+    padding-top: 95px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-height: 301px;
+    padding-top: 101px;
+  }
 }
 
 .hero-header__image {

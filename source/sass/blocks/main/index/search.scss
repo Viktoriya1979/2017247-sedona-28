@@ -1,14 +1,42 @@
+@use "./variables.scss";
+
 .search {
-  padding: 35px 18px 49px 18px;
+  width: 100%;
+  padding: 38px 18px 49px 18px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 66px;
+  }
+}
+
+.search__text-wrapper {
+  width: 100%;
+  max-width: 458px;
+  margin: 0 auto;
 }
 
 .search__text {
   font-size: 21px;
   margin-bottom: 21px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 28px;
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .search__description {
-  margin-bottom: 35px;
+  margin-bottom: 32px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 44px;
+  }
 }
 
 .search__link {

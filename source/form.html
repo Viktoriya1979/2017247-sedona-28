@@ -3,43 +3,46 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Оставьте свой отзыв</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
 
-  <div class="container">
+  <div class="page__container container">
 
     <!--ШАПКА СТРАНИЦЫ ФОРМЫ-->
-    <header class="main-header">
+    <header class="page__header main-header">
 
       <!--Логотип сайта-->
-      <a class="main-header__logo-link logo" href="index.html">
+      <a class="main-header__logo-link logo" href="index.html" tabindex="3">
         <img class="logo__image" src="img/logo/logo.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
 
       <!--Навигация-->
-      <nav class="main-header__navigation main-navigation">
+      <!-- Для открытия меню добавить класс main-navigation--opened, а для закрытия класс main-navigation--closed -->
+      <nav class="main-header__navigation main-navigation main-navigation--nojs">
         <button class="main-navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню.</span>
+          <span class="visually-hidden">Открыть меню/закрыть меню.</span>
         </button>
-        <ul class="main-navigation__list">
-          <li class="main-navigation__item main-navigation__item--background">
-            <a class="main-navigation__link main-navigation__link--light" href="index.html">Главная</a>
-          </li>
-          <li class="main-navigation__item main-navigation__item--background">
-            <a class="main-navigation__link main-navigation__link--light" href="catalog.html">Фото и видео</a>
-          </li>
-          <li class="main-navigation__item main-navigation__item--background">
-            <a class="main-navigation__link main-navigation__link--light main-navigation__link--current"
-              href="form.html" aria-current="page">Форма
-              отзыва</a>
-          </li>
-          <li class="main-navigation__item main-navigation__item--background main-navigation__item--last">
-            <a class="main-navigation__link main-navigation__link--light" href="#">HTML Academy</a>
-          </li>
-        </ul>
+        <div class="main-navigation__wrapper">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="index.html" tabindex="1">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="catalog.html" tabindex="2">Фото и видео</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link main-navigation__link--current" href="form.html" aria-current="page">Форма
+                отзыва</a>
+            </li>
+            <li class="main-navigation__item main-navigation__item--last">
+              <a class="main-navigation__link" href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -52,10 +55,12 @@
           alt="Текст 'Sedona'.">
       </header>
 
-      <h1 class="main-container-inner__title title">Оставьте свой отзыв</h1>
-      <p class="main-container-inner__description description">
-        Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
-      </p>
+      <div class="main-container-inner__text-wrapper main-container-inner__text-wrapper--form">
+        <h1 class="main-container-inner__title title">Оставьте свой отзыв</h1>
+        <p class="main-container-inner__description description">
+          Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+        </p>
+      </div>
 
       <!-- ОБРАТНАЯ СВЯЗЬ -->
       <section class="feedback">
@@ -203,43 +208,45 @@
     <!-- ПОДВАЛ ОСНОВНОГО СОДЕРЖИМОГО СТРАНИЦЫ ФОРМЫ -->
     <footer class="main-footer">
 
-      <!-- Хэштег -->
-      <a class="main-footer__hashteg-link title" href="#">#visitSEDONA</a>
+      <div class="main-footer__wrapper">
+        <!-- Хэштег -->
+        <a class="main-footer__hashteg-link title" href="#">#visitSEDONA</a>
 
-      <!--Ссылки на социальные сети-->
-      <ul class="main-footer__socials-list socials-list">
-        <li class="socials-list__item">
-          <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank"
-            rel="nofollow noopener">
-            <span class="visually-hidden">ВКонтакте.</span>
-          </a>
-        </li>
-        <li class="socials-list__item">
-          <a class="socials-list__link socials-list__link--telegram" href="https://t.me/htmlacademy" target="_blank"
-            rel="nofollow noopener">
-            <span class="visually-hidden">Telegram.</span>
-          </a>
-        </li>
-        <li class="socials-list__item">
-          <a class="socials-list__link socials-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
-            target="_blank" rel="nofollow noopener">
-            <span class="visually-hidden">YouTube.</span>
-          </a>
-        </li>
-      </ul>
+        <!--Ссылки на социальные сети-->
+        <ul class="main-footer__socials-list socials-list">
+          <li class="socials-list__item">
+            <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy"
+              target="_blank" rel="nofollow noopener">
+              <span class="visually-hidden">ВКонтакте.</span>
+            </a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link socials-list__link--telegram" href="https://t.me/htmlacademy" target="_blank"
+              rel="nofollow noopener">
+              <span class="visually-hidden">Telegram.</span>
+            </a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link socials-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
+              target="_blank" rel="nofollow noopener">
+              <span class="visually-hidden">YouTube.</span>
+            </a>
+          </li>
+        </ul>
 
-      <!-- Разработано -->
-      <a class="main-footer__develop-link develop" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
-        rel="nofollow noopener">
-        <span class="develop__text description">Разработано</span>
-        <svg class="develop__icon-logo-htmlacademy" aria-hidden="true" focusable="false" width="29" height="35"
-          viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z"
-            fill="#000" />
-        </svg>
-        <span class="visually-hidden">Логотип сайта HTML Academy.</span>
-      </a>
+        <!-- Разработано -->
+        <a class="main-footer__develop-link develop" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+          rel="nofollow noopener">
+          <span class="develop__text description">Разработано</span>
+          <svg class="develop__icon-logo-htmlacademy" aria-hidden="true" focusable="false" width="29" height="35"
+            viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z"
+              fill="#000" />
+          </svg>
+          <span class="visually-hidden">Логотип сайта HTML Academy.</span>
+        </a>
+      </div>
     </footer>
 
     <!-- Модальное окно об ошибке -->
@@ -247,15 +254,13 @@
     <div class="modal-container modal-container--close">
       <div class="modal-container__message modal-container__message--error">
         <section class="modal-container__content modal-content">
-          <h2 class="modal-content__title title">Что-то пошло не так!</h2>
+          <h2 class="modal-content__title title">Что-то пошло не&nbsp;так!</h2>
           <p class="modal-content__description description">Проверьте поля, выделенные красным, скорее всего вы забыли
             их
             заполнить</p>
         </section>
-        <div class="modal-container__button-wrapper">
-          <!-- Кнопка закрытия модального окна -->
-          <button class="modal-container__close-button button" type="button">Oк</button>
-        </div>
+        <!-- Кнопка закрытия модального окна -->
+        <button class="modal-container__close-button button" type="button">Oк</button>
       </div>
     </div>
 
@@ -265,8 +270,8 @@
       <div class="modal-container__message modal-container__message--success">
         <section class="modal-container__content modal-content">
           <h2 class="modal-content__title title">Ваш отзыв отправлен!</h2>
-          <p class="modal-content__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В
-            ближайшее время мы опубликуем его на сайте.</p>
+          <p class="modal-content__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+            В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
         </section>
         <div class="modal-container__button-wrapper">
           <!-- Кнопка закрытия модального окна -->
@@ -275,6 +280,7 @@
       </div>
     </div>
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,21 @@
+@use "./variables.scss";
+
 .modal-content__title {
   margin-bottom: 25px;
+}
+
+.modal-container__message--error .modal-content__title {
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.modal-container__message--success .modal-content__title {
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+  }
 }
 
 .modal-content__description {

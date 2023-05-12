@@ -1,6 +1,7 @@
+@use "./variables.scss";
+
 .button {
   display: inline-block;
-  max-width: 100%;
   padding: 16px;
   font-family: inherit;
   font-style: normal;
@@ -14,4 +15,22 @@
   border: none;
   transition: all 0.3s linear;
   cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    &:hover {
+      background-color: variables.$bg-hover;
+    }
+  }
+
+  &:active {
+    background-color: variables.$bg-active;
+    color: rgba(255, 255, 255, 0.3);
+    transition-duration: 0.1s;
+  }
+
+  &:disabled {
+    background-color: variables.$bg-disabled;
+    color: variables.$text-color-disabled;
+    cursor: default;
+  }
 }

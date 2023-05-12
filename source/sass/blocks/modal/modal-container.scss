@@ -1,5 +1,7 @@
+@use "./variables.scss";
+
 .modal-container {
-  z-index: 2;
+  z-index: 4;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,6 +16,8 @@
 }
 
 .modal-container__message {
+  display: flex;
+  flex-direction: column;
   margin: auto;
   width: 100%;
   max-width: 320px;
@@ -21,27 +25,81 @@
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
-.modal-container__message--error .modal-container__content {
-  padding: 45px 42px 13px 42px;
+.modal-container__message--error {
+  @media (min-width: variables.$tablet-width) {
+    max-width: 400px;
+  }
 }
 
-.modal-container__button-wrapper {
-  padding: 0 70px 35px 70px;
+.modal-container__message--error .modal-container__content {
+  padding: 45px 42px 13px 42px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 50px;
+    padding-bottom: 28px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 55px;
+    padding-bottom: 23px;
+  }
+}
+
+.modal-container__close-button {
+  align-self: center;
+  margin-bottom: 35px;
+
+  @media (max-width: variables.$mobile-width-only) {
+    font-size: 18px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 49px;
+  }
 }
 
 .modal-container__message--error .modal-container__close-button {
   min-width: 180px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 272px;
+  }
+}
+
+.modal-container__message--success {
+  @media (min-width: variables.$tablet-width) {
+    max-width: 640px;
+  }
 }
 
 .modal-container__message--success .modal-container__content {
-  padding: 39px 51px 36px 51px;
+  padding: 39px 39px 36px 39px;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 518px;
+    margin: 0 auto;
+    padding-top: 56px;
+    padding-bottom: 37px;
+  }
 }
 
-.modal-container__message--success .modal-container__button-wrapper {
+.modal-container__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
   background-color: #f2f2f2;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 44px;
+  }
 }
 
 .modal-container__message--success .modal-container__close-button {
   min-width: 280px;
+  margin-bottom: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 458px;
+  }
 }

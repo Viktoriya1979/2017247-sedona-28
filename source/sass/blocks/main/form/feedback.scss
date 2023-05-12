@@ -1,3 +1,13 @@
+@use "./variables.scss";
+
+.feedback {
+  width: 100%;
+}
+
 .feedback__form {
   margin-bottom: 22px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 64px;
+  }
 }

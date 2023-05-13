@@ -1,4 +1,4 @@
-@use "../variables.scss";
+@use "./variables.scss";
 
 .title {
   margin: 0;
@@ -8,4 +8,8 @@
   text-align: center;
   text-transform: uppercase;
   color: variables.$title-color;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 21px;
+  }
 }

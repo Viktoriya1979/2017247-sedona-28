@@ -2,5 +2,16 @@
 $title-color: #000000;
 
 // Viewports
+$mobile-width-only: 767px;
 $tablet-width: 768px;
 $desktop-width: 1200px;
+
+// States
+$opacity-hover: 0.6;
+$opacity-active: 0.3;
+$bg-hover: #669ec0;
+$bg-active: #5496bd;
+$bg-disabled: #e5e5e5;
+$text-color-hover: #81b3d2;
+$text-color-active: #b3b3b3;
+$text-color-disabled: #ffffff;

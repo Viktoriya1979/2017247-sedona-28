@@ -1,11 +1,51 @@
+@use "./variables.scss";
+
 .gallery-video {
+  width: 100%;
   padding: 17px 20px 0 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 58px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 62px;
+    padding-bottom: 84px;
+  }
+}
+
+.gallery-video__text-wrapper {
+  width: 100%;
+  margin-bottom: 38px;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 445px;
+    margin: 0 auto 92px auto;
+  }
 }
 
 .gallery-video__text {
   margin-bottom: 27px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .gallery-video__description {
-  margin-bottom: 38px;
+  margin-bottom: 20px;
+}
+
+.gallery-video__video-wrapper {
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 648px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 800px;
+  }
 }

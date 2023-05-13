@@ -6,8 +6,11 @@
 
 img {
   max-width: 100%;
-  height: auto;
   object-fit: contain;
+}
+
+a[aria-current="page"] {
+  pointer-events: none;
 }
 
 .visually-hidden {
@@ -21,11 +24,27 @@ img {
   overflow: hidden;
 }
 
+.page {
+  height: 100%;
+}
+
 .page__body {
+  height: 100%;
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   color: #333333;
+  background-color: #f2f2f2;
+}
+
+.page__container {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+}
+
+.page__header {
+  position: relative;
 }

@@ -1,19 +1,46 @@
+@use "./variables.scss";
+
 .main-footer {
+  width: 100%;
   padding: 41px 33px 33px 33px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 36px 33px;
+  }
+}
+
+.main-footer__wrapper {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 960px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    width: calc(100% - 54px);
+  }
 }
 
 .main-footer__hashteg-link {
   display: inline-block;
-  margin-bottom: 30px;
   font-size: 21px;
   text-decoration: none;
   color: #000000;
-}
 
-.main-footer__socials-list {
-  margin-bottom: 30px;
+  @media (min-width: variables.$tablet-width) {
+    justify-self: start;
+  }
 }
 
 .main-footer__develop-link {
   min-width: 129px;
+
+  @media (min-width: variables.$tablet-width) {
+    justify-self: end;
+  }
 }

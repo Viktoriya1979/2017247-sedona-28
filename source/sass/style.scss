@@ -9,10 +9,12 @@
 @use "./blocks/button.scss";
 
 // Header
+@use "./blocks/header/main-header.scss";
 @use "./blocks/header/logo.scss";
 @use "./blocks/header/main-navigation.scss";
 
 // Main
+@use "./blocks/main/main-container.scss";
 @use "./blocks/main/main-container-inner.scss";
 @use "./blocks/main/hero-header.scss";
 
@@ -26,6 +28,7 @@
 @use "./blocks/main/catalog/gallery-photo.scss";
 @use "./blocks/main/catalog/button-like.scss";
 @use "./blocks/main/catalog/gallery-video.scss";
+@use "./blocks/main/catalog/video.scss";
 
 // Form
 @use "./blocks/main/form/feedback.scss";

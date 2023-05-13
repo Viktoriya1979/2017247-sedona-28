@@ -1,6 +1,20 @@
+@use "./variables.scss";
+
 .logo {
   display: block;
   width: 185px;
+  transition: all 0.3s;
+
+  @media (min-width: variables.$tablet-width) {
+    &:hover {
+      opacity: variables.$opacity-hover;
+    }
+  }
+
+  &:active {
+    opacity: variables.$opacity-active;
+    transition-duration: 0.1s;
+  }
 }
 
 .logo__image {

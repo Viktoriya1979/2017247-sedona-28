@@ -13,6 +13,7 @@
   display: grid;
   justify-content: center;
   justify-items: center;
+  grid-auto-flow: dense;
   gap: 30px;
   width: 100%;
   margin: 0 auto;
@@ -31,9 +32,27 @@
   font-size: 21px;
   text-decoration: none;
   color: #000000;
+  transition: all 0.3s;
 
   @media (min-width: variables.$tablet-width) {
+    grid-column: 1/2;
     justify-self: start;
+
+    &:hover {
+      color: variables.$text-color-hover;
+    }
+  }
+
+  &:active {
+    color: variables.$text-color-active;
+    transition-duration: 0.1s;
+  }
+}
+
+.main-footer__socials-list {
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
   }
 }
 
@@ -41,6 +60,7 @@
   min-width: 129px;
 
   @media (min-width: variables.$tablet-width) {
+    grid-column: 3/4;
     justify-self: end;
   }
 }

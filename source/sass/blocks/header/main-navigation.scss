@@ -14,7 +14,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 3;
+  z-index: 4;
   display: inline-block;
   min-width: 63px;
   min-height: 56px;
@@ -58,7 +58,7 @@
 
 .main-navigation--opened .main-navigation__wrapper {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   display: block;
   top: 0;
   right: 0;

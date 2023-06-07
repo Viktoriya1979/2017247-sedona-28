@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Фото и видео</title>
+  <link rel="icon" href="favicon-32x32.ico">
+  <link rel="icon" href="img/favicons/favicon-32x32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/favicon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,7 +20,7 @@
     <header class="page__header main-header">
 
       <!--Логотип сайта-->
-      <a class="main-header__logo-link logo" href="index.html" tabindex="3">
+      <a class="main-header__logo-link logo" href="index.html">
         <img class="logo__image" src="img/logo/logo.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
 
@@ -29,10 +33,10 @@
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="index.html" tabindex="1">Главная</a>
+              <a class="main-navigation__link" href="index.html">Главная</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link main-navigation__link--current" href="catalog.html" tabindex="2"
+              <a class="main-navigation__link main-navigation__link--current" href="catalog.html"
                 aria-current="page">Фото и видео</a>
             </li>
             <li class="main-navigation__item">
@@ -77,8 +81,10 @@
                 <span class="button-like__quantity"><b class="button-like__number">1350</b></span>
               </button>
             </div>
-            <img class="gallery-photo__image" src="img/catalog/open-spaces-gallery.jpg" width="280" height="280"
-              alt="Дорога, уходящая вдаль, на фоне гор и ночного заката, по краям которой растут деревья и кустарники.">
+            <a class="gallery-photo__link" href="#">
+              <img class="gallery-photo__link-image" src="img/catalog/open-spaces-gallery.jpg" width="280" height="280"
+                alt="Дорога, уходящая вдаль, на фоне гор и ночного заката, по краям которой растут деревья и кустарники.">
+            </a>
           </li>
           <li class="gallery-photo__item">
             <div class="gallery-photo__info-wrapper">
@@ -91,8 +97,10 @@
                 <span class="button-like__quantity"><b class="button-like__number">143</b></span>
               </button>
             </div>
-            <img class="gallery-photo__image" src="img/catalog/vegetation-gallery.jpg" width="280" height="280"
-              alt="Цветущий кактус на фоне красно-коричневых скалистых гор.">
+            <a class="gallery-photo__link" href="#">
+              <img class="gallery-photo__link-image" src="img/catalog/vegetation-gallery.jpg" width="280" height="280"
+                alt="Цветущий кактус на фоне красно-коричневых скалистых гор.">
+            </a>
           </li>
           <li class="gallery-photo__item">
             <div class="gallery-photo__info-wrapper">
@@ -105,8 +113,10 @@
                 <span class="button-like__quantity"><b class="button-like__number">96</b></span>
               </button>
             </div>
-            <img class="gallery-photo__image" src="img/catalog/road-gallery.jpg" width="280" height="280"
-              alt="Вид сверху на извилистую дорогу в горах, проходящую среди зеленых зарослей деревьев и кустарников.">
+            <a class="gallery-photo__link" href="#">
+              <img class="gallery-photo__link-image" src="img/catalog/road-gallery.jpg" width="280" height="280"
+                alt="Вид сверху на извилистую дорогу в горах, проходящую среди зеленых зарослей деревьев и кустарников.">
+            </a>
           </li>
           <li class="gallery-photo__item">
             <div class="gallery-photo__info-wrapper">
@@ -119,8 +129,11 @@
                 <span class="button-like__quantity"><b class="button-like__number">254</b></span>
               </button>
             </div>
-            <img class="gallery-photo__image" src="img/catalog/devils-bridge-gallery.jpg" width="280" height="280"
-              alt="Обзор тропы Моста Дьявола, которая представляет собой самую большую арку из природного песчаника.">
+            <a class="gallery-photo__link" href="#">
+              <img class="gallery-photo__link-image" src="img/catalog/devils-bridge-gallery.jpg" width="280"
+                height="280"
+                alt="Обзор тропы Моста Дьявола, которая представляет собой самую большую арку из природного песчаника.">
+            </a>
           </li>
         </ul>
       </section>
@@ -181,10 +194,9 @@
           rel="nofollow noopener">
           <span class="develop__text description">Разработано</span>
           <svg class="develop__icon-logo-htmlacademy" aria-hidden="true" focusable="false" width="29" height="35"
-            viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            viewBox="0 0 29 35" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
             <path
-              d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z"
-              fill="#000" />
+              d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z" />
           </svg>
           <span class="visually-hidden">Логотип сайта HTML Academy.</span>
         </a>

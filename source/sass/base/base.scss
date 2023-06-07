@@ -1,3 +1,5 @@
+@use "./variables.scss";
+
 *,
 *::before,
 *::after {
@@ -11,6 +13,12 @@ img {
 
 a[aria-current="page"] {
   pointer-events: none;
+}
+
+br {
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
 }
 
 .visually-hidden {

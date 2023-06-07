@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="icon" href="favicon-32x32.ico">
+  <link rel="icon" href="img/favicons/favicon-32x32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/favicon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,7 +20,7 @@
     <header class="page__header main-header">
 
       <!--Логотип сайта-->
-      <a class="main-header__logo-link logo" href="index.html" tabindex="3" aria-current="page">
+      <a class="main-header__logo-link logo" href="index.html" aria-current="page">
         <img class="logo__image" src="img/logo/logo.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
 
@@ -29,11 +33,11 @@
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
-              <a class="main-navigation__link main-navigation__link--current" href="index.html" tabindex="1"
+              <a class="main-navigation__link main-navigation__link--current" href="index.html"
                 aria-current="page">Главная</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="catalog.html" tabindex="2">Фото и видео</a>
+              <a class="main-navigation__link" href="catalog.html">Фото и видео</a>
             </li>
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="form.html">Форма отзыва</a>
@@ -67,15 +71,29 @@
         </div>
         <ol class="advantages__list">
           <li class="advantages__item advantages__item--image advantages__item--tavern">
-            <div class="advantages__image-wrapper">
+            <div class="advantages__photo-wrapper">
               <div class="advantages__text-wrapper">
-                <h3 class="advantages__title title">Настоящий городок</h3>
+                <h3 class="advantages__title title">Настоящий <br>городок</h3>
                 <span class="advantages__number">— №1 —</span>
                 <p class="advantages__description description">Седона — не аттракцион для туристов, там
                   течёт своя жизнь</p>
               </div>
-              <img class="advantages__image" src="img/tavern.jpg" width="320" height="260"
-                alt="На фоне гор двухэтажная таверна с открытой верандой.">
+              <div class="advantages__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/tavern-desktop.webp 1x, img/tavern-desktop@2x.webp 2x" width="800" height="256">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/tavern-tablet.webp 1x, img/tavern-tablet@2x.webp 2x" width="512" height="256">
+                  <source type="image/webp" srcset="img/tavern-mobile.webp 1x, img/tavern-mobile@2x.webp 2x" width="320"
+                    height="260">
+                  <source media="(min-width: 1200px)" srcset="img/tavern-desktop.jpg 1x, tavern-desktop@2x.jpg 2x"
+                    width="800" height="256">
+                  <source media="(min-width: 768px)" srcset="img/tavern-tablet.jpg 1x, tavern-tablet@2x.jpg 2x"
+                    width="512" height="256">
+                  <img class="advantages__image" src="img/tavern-mobile.jpg" srcset="img/tavern-mobile@2x.jpg 2x"
+                    width="320" height="260" alt="На фоне гор двухэтажная таверна с открытой верандой.">
+                </picture>
+              </div>
             </div>
             <ul class="advantages__addition-list addition-list">
               <li class="addition-list__item addition-list__item--housing">
@@ -89,7 +107,7 @@
               <li class="addition-list__item addition-list__item--food">
                 <div class="addition-list__text-wrapper">
                   <h4 class="addition-list__title title">Еда</h4>
-                  <p class="addition-list__description description">Всегда заказывайте фирменный бургер, вы не
+                  <p class="addition-list__description description">Всегда заказывайте фирменный бургер, <br>вы не
                     разочаруетесь!
                   </p>
                 </div>
@@ -97,7 +115,7 @@
               <li class="addition-list__item addition-list__item--souvenirs">
                 <div class="addition-list__text-wrapper">
                   <h4 class="addition-list__title title">Сувениры</h4>
-                  <p class="addition-list__description description">Не только китайского, но и местного
+                  <p class="addition-list__description description">Не только китайского, <br>но и местного
                     производства!
                   </p>
                 </div>
@@ -105,30 +123,48 @@
             </ul>
           </li>
           <li class="advantages__item advantages__item--image advantages__item--bridge-devil">
-            <div class="advantages__image-wrapper">
+            <div class="advantages__photo-wrapper">
               <div class="advantages__text-wrapper">
-                <h3 class="advantages__title title">Там есть мост дьявола</h3>
+                <h3 class="advantages__title title">Там есть <br>мост дьявола</h3>
                 <span class="advantages__number">— №2 —</span>
                 <p class="advantages__description description">Да, по нему можно пройти! Если вы осмелитесь, конечно
                 </p>
               </div>
-              <img class="advantages__image" src="img/devils-bridge.jpg" width="320" height="260"
-                alt="Обзор тропы Моста Дьявола, которая представляет собой самую большую арку из природного песчаника.">
+              <div class="advantages__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/devils-bridge-desktop.webp 1x, img/devils-bridge-desktop@2x.webp 2x" width="800"
+                    height="256">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/devils-bridge-tablet.webp 1x, img/devils-bridge-tablet@2x.webp 2x" width="512"
+                    height="256">
+                  <source type="image/webp"
+                    srcset="img/devils-bridge-mobile.webp 1x, img/devils-bridge-mobile@2x.webp 2x" width="320"
+                    height="260">
+                  <source media="(min-width: 1200px)"
+                    srcset="img/devils-bridge-desktop.jpg 1x, devils-bridge-desktop@2x.jpg 2x" width="800" height="256">
+                  <source media="(min-width: 768px)"
+                    srcset="img/devils-bridge-tablet.jpg 1x, devils-bridge-tablet@2x.jpg 2x" width="512" height="256">
+                  <img class="advantages__image" src="img/devils-bridge-mobile.jpg"
+                    srcset="devils-bridge-mobile@2x.jpg 2x" width="320" height="260"
+                    alt="Обзор тропы Моста Дьявола, которая представляет собой самую большую арку из природного песчаника.">
+                </picture>
+              </div>
             </div>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__title title">Небольшая площадь</h3>
+            <h3 class="advantages__title title">Небольшая <br>площадь</h3>
             <span class="advantages__number">— №3 —</span>
             <p class="advantages__description description">Все интересные места находятся очень близко</p>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__title title">Красивая дорога</h3>
+            <h3 class="advantages__title title">Красивая <br>дорога</h3>
             <span class="advantages__number">— №4 —</span>
             <p class="advantages__description description">Ехать в Седону из Лас-Вегаса
-              совсем не скучно!</p>
+              совсем <br>не скучно!</p>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__title title">Мало туристов</h3>
+            <h3 class="advantages__title title">Мало <br>туристов</h3>
             <span class="advantages__number">— №5 —</span>
             <p class="advantages__description description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
@@ -147,10 +183,13 @@
       </section>
 
       <!-- КАРТА -->
-      <!-- Делаем пока картинку-заглушку -->
       <section class="main-container__map map">
         <h2 class="visually-hidden">Карта.</h2>
-        <img class="map__image" src="img/map.jpg" width="320" height="350" alt="Город Седона на карте.">
+        <iframe class="map__image-iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.13688464871!2d-111.83633836100485!3d34.85444188842563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1683988837158!5m2!1sru!2sru"
+          width="320" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Город Седона, штат Аризона, США.">
+        </iframe>
       </section>
     </main>
 
@@ -188,10 +227,9 @@
           rel="nofollow noopener">
           <span class="develop__text description">Разработано</span>
           <svg class="develop__icon-logo-htmlacademy" aria-hidden="true" focusable="false" width="29" height="35"
-            viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            viewBox="0 0 29 35" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
             <path
-              d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z"
-              fill="#000" />
+              d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z" />
           </svg>
           <span class="visually-hidden">Логотип сайта HTML Academy.</span>
         </a>

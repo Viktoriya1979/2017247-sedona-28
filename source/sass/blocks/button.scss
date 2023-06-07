@@ -13,6 +13,7 @@
   color: #ffffff;
   background-color: #81b3d2;
   border: none;
+  appearance: none;
   transition: all 0.3s linear;
   cursor: pointer;
 
@@ -29,8 +30,8 @@
   }
 
   &:disabled {
-    background-color: variables.$bg-disabled;
-    color: variables.$text-color-disabled;
+    background-color: variables.$btn-bg-disabled;
+    color: variables.$btn-text-color-disabled;
     cursor: default;
   }
 }

@@ -1,35 +1,86 @@
 @use "./variables.scss";
 
 .form-field {
+  position: relative;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .form-field__text {
-  margin-left: 16px;
   text-transform: uppercase;
 }
 
-.form-field--textarea .form-field__text {
-  margin-left: 0;
-  margin-bottom: 20px;
+.form-field__input {
+  transition: all 0.3s;
+}
 
-  @media (min-width: variables.$tablet-width) {
-    margin-bottom: 27px;
+.form-field--phone .form-field__input,
+.form-field--mail .form-field__input {
+  padding-right: 54px;
+}
+
+.form-field--phone {
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    min-width: 58px;
+    min-height: 58px;
+    background-color: #e6e6e6;
+    background-image: url("../img/icon/phone.svg");
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
-.form-field--textarea .form-field__input {
-  width: 100%;
-  min-height: 150px;
+.form-field--mail {
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    min-width: 58px;
+    min-height: 58px;
+    background-color: #e6e6e6;
+    background-image: url("../img/icon/letter.svg");
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
 
-  @media (min-width: variables.$tablet-width) {
-    min-height: 154px;
+@media (min-width: variables.$tablet-width) {
+  .form-field:hover .form-field__input {
+    background-color: variables.$input-bg-hover;
   }
 
-  @media (min-width: variables.$desktop-width) {
-    max-width: 768px;
-    min-height: 160px;
-    margin: 0 auto;
+  .form-field__input:hover {
+    background-color: variables.$input-bg-hover;
   }
+}
+
+.form-field:active .form-field__input {
+  background-color: variables.$input-field-bg-active;
+  border-color: variables.$input-field-border-color-active;
+  transition-duration: 0.1s;
+}
+
+.form-field__input:active {
+  background-color: variables.$input-field-bg-active;
+  border-color: variables.$input-field-border-color-active;
+  transition-duration: 0.1s;
+}
+
+// Неактивное состояние
+.form-field.disabled {
+  opacity: variables.$input-label-opacity-disabled;
+  pointer-events: none;
+}
+
+.form-field__input:disabled {
+  opacity: variables.$input-label-opacity-disabled;
+  pointer-events: none;
 }

@@ -1,6 +1,97 @@
+@use "./variables.scss";
+
+.form-control {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 .form-control__text {
+  position: relative;
+  padding: 10px 10px 10px 62px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    width: 46px;
+    height: 46px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+}
+
+.form-control--radio .form-control__text {
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+.form-control__input[type="checkbox"]:checked+.form-control__text::after {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  content: "";
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/icon/tick.svg");
+  background-repeat: no-repeat;
+  background-size: 22px 16px;
+  background-position: center;
+  transition: all 0.3s;
+}
+
+.form-control__input[type="radio"]:checked+.form-control__text::after {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #333333;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .form-control:hover .form-control__text::before {
+    background-color: variables.$input-bg-hover;
+  }
+}
+
+.form-control__input:focus-visible+.form-control__text::before {
+  outline: variables.$outline-focus;
+  transition-duration: 0s;
+}
+
+@supports not selector(:focus-visible) {
+  .form-control__input:focus+.form-control__text::before {
+    outline: variables.$outline-focus;
+    transition-duration: 0s;
+  }
+}
+
+.form-control:active .form-control__text::before {
+  background-color: variables.$input-control-bg-active;
+  transition-duration: 0.1s;
+}
+
+.form-control__input:checked:active+.form-control__text::after {
+  opacity: variables.$opacity-active;
+  transition-duration: 0.1s;
+}
+
+// Неактивное состояние
+.form-control.disabled {
+  opacity: variables.$input-label-opacity-disabled;
+  pointer-events: none;
 }

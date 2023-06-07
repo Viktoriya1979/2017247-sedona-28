@@ -1,0 +1,29 @@
+@use "./variables.scss";
+
+.button-play {
+  display: inline-block;
+  width: 48px;
+  height: 54px;
+  padding: 0;
+  border: none;
+  opacity: 0.7;
+  background-color: transparent;
+  background-image: url("../img/icon/button-play.svg");
+  background-size: 48px 54px;
+  background-repeat: no-repeat;
+  background-position: top 0 left 0;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  @media (min-width: variables.$tablet-width) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    opacity: 1;
+    transition-duration: 0.1s;
+  }
+}

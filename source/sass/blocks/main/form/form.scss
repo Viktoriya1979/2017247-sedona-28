@@ -6,27 +6,6 @@
   }
 }
 
-.form__group {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px 24px 20px;
-  border: none;
-
-  @media (max-width: variables.$mobile-width-only) {
-    border-bottom: solid 1px #e5e5e5;
-  }
-
-  @media (min-width: variables.$tablet-width) {
-    max-width: 688px;
-    padding-bottom: 45px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    max-width: 1000px;
-    padding-bottom: 56px;
-  }
-}
-
 .form__groups-wrapper {
   @media (min-width: variables.$tablet-width) {
     position: relative;
@@ -63,6 +42,27 @@
   }
 }
 
+.form__group {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px 24px 20px;
+  border: none;
+
+  @media (max-width: variables.$mobile-width-only) {
+    border-bottom: solid 1px #e5e5e5;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 648px;
+    padding: 0 36px 45px 36px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 960px;
+    padding: 0 53px 56px 53px;
+  }
+}
+
 .form__group--name,
 .form__group--contacts {
   padding: 0 20px 37px 20px;
@@ -72,41 +72,95 @@
   }
 }
 
-.form__group-title {
-  width: 100%;
-  padding: 0;
-  padding-top: 24px;
-  margin-bottom: 20px;
+.form__group--last {
+  padding-bottom: 56px;
+
+  @media (max-width: variables.$mobile-width-only) {
+    border-bottom: none;
+  }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0;
-    margin-bottom: 28px;
+    padding-bottom: 48px;
+  }
+}
+
+.form__group--decoration {
+  @media (min-width: variables.$tablet-width) {
+    border-top: 1px solid #dbdbdb;
+  }
+}
+
+.form__group-title {
+  padding: 0;
+  margin: 24px auto 20px auto;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 auto 28px auto;
+  }
+}
+
+.form__group--decoration .form__group-title {
+  @media (min-width: variables.$tablet-width) {
+    min-width: 402px;
   }
 }
 
 .form__field-list,
 .form__control-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 16px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.form__field-wrapper {
-  width: 100%;
-  padding: 24px 20px 0 20px;
-  margin: 0 auto 56px auto;
-
+.form__control-list {
   @media (min-width: variables.$tablet-width) {
-    max-width: 688px;
-    margin-bottom: 47px;
-    padding-top: 0;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 
   @media (min-width: variables.$desktop-width) {
-    max-width: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 28px;
+    width: calc(100% + 106px);
+    margin-left: -53px;
+    padding: 17px 53px;
+  }
+}
+
+.form__control-list--attractions {
+  @media (min-width: variables.$tablet-width) {
+    column-gap: 32px;
+    padding: 0 48px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 31px 44.5px;
+  }
+}
+
+.form__field-text {
+  margin-left: 16px;
+}
+
+.form__field-input--textarea {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 154px;
+    width: calc(100% + 72px);
+    margin-left: -36px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 768px;
+    min-height: 160px;
+    margin: 0 auto;
   }
 }
 
@@ -117,7 +171,6 @@
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     max-width: 688px;
@@ -133,10 +186,14 @@
   min-width: 280px;
   margin-bottom: 3px;
 
+  @media (max-width: variables.$mobile-width-only) {
+    width: 100%;
+  }
+
   @media (min-width: variables.$tablet-width) {
     min-width: 324px;
-    max-width: 60%;
     margin-bottom: 0;
+    margin-right: 30px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -145,13 +202,12 @@
 }
 
 .form__comment {
-  display: inline-block;
+  display: block;
   font-size: 12px;
   text-transform: uppercase;
   color: rgba(51, 51, 51, 0.6);
 
   @media (min-width: variables.$tablet-width) {
-    max-width: 35%;
     font-size: 14px;
   }
 }
